@@ -28,15 +28,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () {},
+        leading: const Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+          size: 30,
         ),
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -56,160 +53,154 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.close,
-              color: Colors.white,
-              size: 30,
-            ),
-            onPressed: () {},
+        actions: const [
+          Icon(
+            Icons.close,
+            color: Colors.white,
+            size: 30,
           ),
         ],
         centerTitle: true,
       ),
       body: Column(
         children: [
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  height: 10,
+                  color: Colors.blue,
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  height: 10,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
           Expanded(
-            child: ListView(
-              children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 10,
-                        color: Colors.blue,
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 10,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 50,
-                        width: 75,
-                        child: Icon(
-                          Icons.question_mark_outlined,
-                          color: Colors.black,
-                          size: 20,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 9,
-                      child: Text(
-                        '1/10',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 300,
-                      width: 500,
-                      color: Colors.grey,
-                    ),
-                    Text(
-                        'С момента выхода на экраны советских кинотеатров фильма «Служебный роман» прошло уже более 40 лет. Картина моментально завоевала сердца публики и стала одной из самых любимых отечественных комедий.'),
-                    SizedBox(height: 20),
-                    Text(
-                        'В Москве на улице Пятницкой находится павильон метро, размещенный на месте снесенной церкви. Напишите название церкви. Подсказкой станет стена-граффити дома, стоящего прямо у выхода метро «Новокузнецкая».'),
-                  ],
-                ),
-                SizedBox(height: 17),
-                Column(
-                  children: [
-                    Row(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: ListView(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 17),
+                    child: Row(
                       children: [
-                        Expanded(
-                          child: Container(
-                            height: 50,
-                            width: 75,
-                            child: Icon(
-                              Icons.circle,
-                              color: Colors.black,
-                              size: 20,
-                            ),
-                          ),
+                        Image.asset(
+                          'assets/icon/Group1021.png',
+                          width: 17,
+                          height: 17,
                         ),
-                        Expanded(
-                          flex: 9,
-                          child: Text(
-                            'Наш директор',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w300,
-                            ),
+                        SizedBox(width: 10),
+                        Text(
+                          '1/10',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w300,
                           ),
                         ),
                       ],
                     ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            height: 50,
-                            width: 75,
-                            child: Icon(
-                              Icons.circle_rounded,
-                              color: Colors.black,
-                              size: 20,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/images/Bitmap.png"),
+                      const Text(
+                          'С момента выхода на экраны советских кинотеатров фильма «Служебный роман» прошло уже более 40 лет. Картина моментально завоевала сердца публики и стала одной из самых любимых отечественных комедий.'),
+                      const SizedBox(height: 20),
+                      const Text(
+                          'В Москве на улице Пятницкой находится павильон метро, размещенный на месте снесенной церкви. Напишите название церкви. Подсказкой станет стена-граффити дома, стоящего прямо у выхода метро «Новокузнецкая».'),
+                    ],
+                  ),
+                  const SizedBox(height: 17),
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 50,
+                              width: 75,
+                              child: Image.asset(
+                                'assets/icon/Group826.png',
+                                height: 20,
+                                width: 20,
+                              ),
                             ),
                           ),
-                        ),
-                        Expanded(
-                          flex: 9,
-                          child: Text(
-                            'Наша мымра',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w300,
+                          SizedBox(width: 15),
+                          const Expanded(
+                            flex: 9,
+                            child: Text(
+                              'Наш директор',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            height: 50,
-                            width: 75,
-                            child: Icon(
-                              Icons.circle_rounded,
-                              color: Colors.black,
-                              size: 20,
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 50,
+                              width: 75,
+                              child: Image.asset(
+                                'assets/icon/Rectangle.png',
+                                height: 20,
+                                width: 20,
+                              ),
                             ),
                           ),
-                        ),
-                        Expanded(
-                          flex: 9,
-                          child: Text(
-                            'Мужчина в юбке',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w300,
+                           SizedBox(width: 15),
+                          const Expanded(
+                            flex: 9,
+                            child: Text(
+                              'Наша мымра',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 50,
+                              width: 75,
+                              child: Image.asset(
+                                'assets/icon/Rectangle.png',
+                                height: 20,
+                                width: 20,
+                              ),
+                            ),
+                          ),
+                           SizedBox(width: 15),
+                          const Expanded(
+                            flex: 9,
+                            child: Text(
+                              'Мужчина в юбке',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
           Row(
@@ -218,7 +209,7 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   height: 80,
                   color: Colors.red,
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Ответить'),
@@ -230,11 +221,12 @@ class HomePage extends StatelessWidget {
                 child: Container(
                   height: 80,
                   color: Colors.grey[300],
-                  child: Row(
+                  child:  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Далее'),
-                      Icon(Icons.arrow_right),
+                      SizedBox(width: 15),
+                      Icon(Icons.arrow_forward)
                     ],
                   ),
                 ),
